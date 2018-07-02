@@ -93,7 +93,7 @@ $(function(){
 				<div class="form-group">
                     <input type="email" name="email" id="email" class="form-control input-lg" placeholder="Email Address"  > 	
 				</div>
-				<div class="form-group">
+				<div class="form-group">S
                     <input type="password" name="password" id="password" class="form-control input-lg" placeholder="Password" >
 				</div>
 				<div class="button-checkbox">
@@ -122,3 +122,15 @@ $(function(){
 </div>
 
 </body>
+<?php
+ if (isset($_COOKIE['email']) and isset($_COOKIE['password'])){
+	 
+	 $email  = $_COOKIE['email'];
+	 $password = $_COOKIE['password'];
+	 echo "<script>
+	 document.getElementById('email').value = '$email';
+	 document.getElementById('password').value = '$password';
+	 </script>";
+	
+	}
+?>
